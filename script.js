@@ -1,4 +1,5 @@
-const navToggleBtn = document.getElementById('navbar-toggler')
+const body = document.body;
+const navToggleBtn = document.querySelector('.navbar-toggler');
 const navbar = document.getElementById('navbar');
 const navbarCollapse = document.querySelector('.collapse');
 const imgContainer = document.getElementById('classes-img-container');
@@ -70,3 +71,11 @@ classOption4.addEventListener('click', () => classOptionSelect(3));
 classOption5.addEventListener('click', () => classOptionSelect(4));
 
 classOptionSelect(0);
+
+navToggleBtn.addEventListener('click', () => {
+    if (navToggleBtn.classList.contains('collapsed')) {
+      body.style.overflowY = 'auto';
+    } else {
+      body.style.overflowY = 'hidden';
+    }
+  });
